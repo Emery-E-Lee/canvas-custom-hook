@@ -1,11 +1,10 @@
-import "./App.css";
+import React from "react";
+import Canvas from "./components/Canvas"; // Change the path according to the directory structure of your project
+//import Test from "./components/Test";
+import Wave from "./components/Wave";
 
 function App() {
-  return (
-    <div className='App'>
-      <h1>useCanvas custom hook</h1>
-    </div>
-  );
+  return <Wave />;
 }
 
 export default App;
