@@ -1,19 +1,19 @@
 import React, { useEffect } from "react";
 import { useRef } from "react";
 
-const getPixelRatio = (context) => {
-  var backingStore =
-    context.backingStorePixelRatio ||
-    context.webkitBackingStorePixelRatio ||
-    context.mozBackingStorePixelRatio ||
-    context.msBackingStorePixelRatio ||
-    context.oBackingStorePixelRatio ||
-    context.backingStorePixelRatio ||
-    1;
-  return (window.devicePixelRatio || 1) / backingStore;
-};
+// const getPixelRatio = (context) => {
+//   var backingStore =
+//     context.backingStorePixelRatio ||
+//     context.webkitBackingStorePixelRatio ||
+//     context.mozBackingStorePixelRatio ||
+//     context.msBackingStorePixelRatio ||
+//     context.oBackingStorePixelRatio ||
+//     context.backingStorePixelRatio ||
+//     1;
+//   return (window.devicePixelRatio || 1) / backingStore;
+// };
 
-class CPoint {
+class Point {
   constructor(index, x, y) {
     this.x = x;
     this.y = y;
@@ -32,7 +32,7 @@ class CPoint {
   }
 }
 
-const Point = () => {
+const Wave = () => {
   let ref = useRef();
 
   useEffect(() => {
@@ -80,7 +80,7 @@ const Point = () => {
     //console.log(this.points);
 
     for (let i = 0; i < totalPoints; i++) {
-      let point = new CPoint(0 + i, pointGap * i, centerY);
+      let point = new Point(0 + i, pointGap * i, centerY);
       points[i] = point;
     }
     console.log("points", points);
@@ -191,4 +191,4 @@ const Point = () => {
   );
 };
 
-export default Point;
+export default Wave;
